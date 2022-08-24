@@ -23,7 +23,7 @@ FactoryBot.define do
     created_at{Date.today+1}
   end
 
-  factory :third_task, class: Task do
+  factory :third_kpt, class: Kpt do
     user
     date{Date.today+2}
     keep_content{ 'test_keep3' }

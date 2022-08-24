@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get "kpts/day_kpt" => "kpts#day_kpt"
   resources :join_teams, only: [:create, :destroy]
   resources :teams do
