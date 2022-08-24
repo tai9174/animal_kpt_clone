@@ -12,11 +12,11 @@ RSpec.describe 'KPT管理機能', type: :system do
         expect(page).to have_content 'test_nameのKpts'
       end
     end  
-    # context 'ログインせずタスク一覧画面に飛ぼうとした場合' do
-    #   it 'ログイン画面に遷移すること' do
-    #     visit tasks_path
-    #     expect(page).to have_content 'ログイン'
-    #   end
-    # end
+    context 'ログインせずマイKPT一覧画面に飛ぼうとした場合' do
+      it 'ログイン画面に遷移すること' do
+        visit kpts_path
+        expect(page).to have_content 'ログイン'
+      end
+    end
   end
 end
