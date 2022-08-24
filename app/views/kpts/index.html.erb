@@ -2,6 +2,11 @@
 
 <h1><%= current_user.name %>のKpts</h1>
 
+<% if current_user.admin == true %>
+  <td><%= link_to '管理者画面', rails_admin_path %></td>
+<% else %>
+  <td></td>
+<% end %>
 <%= link_to "New Kpt", new_kpt_path, data: {"turbolinks" => false} %>
 <%= link_to 'アプリの使い方', tops_help_path%>
 <%= link_to 'お気に入り', favorits_index_path%>
