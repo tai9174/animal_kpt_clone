@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+  def self.guest
+    find_or_create_by!(name: 'ゲストユーザー') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
   has_many :owned_teams, class_name: "Team"
   has_many :join_teams, dependent: :destroy
   has_many :join_team_teams, through: :join_teams, source: :team
