@@ -9,6 +9,7 @@ FactoryBot.define do
     try_content { 'test_try' }
     try_status{1}
     created_at{Date.today}
+    favorite{true}
   end
 
   factory :second_kpt, class: Kpt do
@@ -21,6 +22,7 @@ FactoryBot.define do
     try_content { 'test_try2' }
     try_status{1}
     created_at{Date.today+1}
+    favorite{false}
   end
 
   factory :third_kpt, class: Kpt do
@@ -33,5 +35,6 @@ FactoryBot.define do
     try_content { 'test_try3' }
     try_status{1}
     created_at{Date.today+2}
+    favorite{false}
   end
 end
