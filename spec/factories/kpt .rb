@@ -3,11 +3,11 @@ FactoryBot.define do
     user
     date{Date.today}
     keep_content{ 'test_keep' }
-    keep_status{1}
+    keep_status{2}
     problem_content { 'test_problem' }
     problem_status{1}
     try_content { 'test_try' }
-    try_status{1}
+    try_status{0}
     created_at{Date.today}
     favorite{true}
   end
