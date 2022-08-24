@@ -1,7 +1,7 @@
 
-User.create!(name:"管理者",password:"kanrisya",admin:"ture")
+User.create!(name:"テスト管理者",password:"kanrisya",admin: true)
 10.times do |t|
-  User.create!(name:"ユーザー#{t + 1}",password:"yuuzaa",admin: false)
+  User.create!(name:"テストユーザー#{t + 1}",password:"yuuzaa",admin: false)
 end
 
 User.all.each do |user|
@@ -23,7 +23,7 @@ User.all.each do |user|
     problem_status:rand(0..2),
     try_content:"try_content1(#{user.name})",
     try_status:rand(0..2),
-    favorite: ture
+    favorite: true
   )
   user.kpts.create!(
     date:(Time.now.-2.day),
@@ -89,7 +89,7 @@ end
 
 User.all.each do |user|
   user.teams.create!(
-  name:"team(#{user.name})"
+    name:"team(#{user.name})"
   )
 end
 
