@@ -17,7 +17,7 @@ class TeamsController < ApplicationController
   
   def edit
     unless @team.user == current_user
-      redirect_to teams_path
+      redirect_to teams_path,notice: '作成者以外はチームを編集することができません'
     end
   end
 
@@ -52,7 +52,7 @@ class TeamsController < ApplicationController
   # DELETE /kpts/1 or /kpts/1.json
   def destroy
     unless @team.user == current_user
-      redirect_to teams_path
+      redirect_to teams_path,notice: '作成者以外はチームを削除することができません'
     end
 
     @team.destroy
