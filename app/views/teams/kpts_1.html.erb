@@ -17,7 +17,7 @@
 
   <tbody>
     <%@day_1_kpts.each do |kpt| %>
-      <tr>
+      <tr class="team_kpts1_row">
         <td><%=kpt.user.name %></td>
           <% if kpt.keep_status == "●少し達成●" %>
             <td style="height: 250px; width: 350px; padding: 10px; margin-bottom: 10px; border: 1px solid #333333;background-color: #FFFFCC;">
