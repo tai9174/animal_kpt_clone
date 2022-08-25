@@ -11,21 +11,21 @@
   </head>
 
   <body>
-  <% if user_signed_in? %>
-    <%= link_to 'トップ画面', tops_index_path %>
-    <%= link_to 'プロフィール画面', users_show_path %>
-    <%= link_to 'マイKPT', kpts_path %>
-    <%= link_to 'みんなのKPT', teams_path%>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    
-    
-  <% else %>
-    <%= link_to 'トップ画面', tops_index_path %>
-    <%= link_to "ログイン画面", new_user_session_path %>
-    <%= link_to "新規登録", new_user_registration_path %>
-    <%= link_to "ゲストログイン",users_guest_sign_in_path, method: :post%>
-    <%= link_to "ゲスト管理者ログイン",users_guest_admin_sign_in_path, method: :post%>
-  <% end %>
+    <header>  
+      <% if user_signed_in? %>
+        <%= link_to 'トップ画面', tops_index_path %>
+        <%= link_to 'プロフィール画面', users_show_path %>
+        <%= link_to 'マイKPT', kpts_path %>
+        <%= link_to 'みんなのKPT', teams_path%>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'トップ画面', tops_index_path %>
+        <%= link_to "ログイン画面", new_user_session_path %>
+        <%= link_to "新規登録", new_user_registration_path %>
+        <%= link_to "ゲストログイン",users_guest_sign_in_path, method: :post%>
+        <%= link_to "ゲスト管理者ログイン",users_guest_admin_sign_in_path, method: :post%>
+      <% end %>
+    </header>
     <%= yield %>
     <!-- clipboard.js -->
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
@@ -48,6 +48,7 @@
       console.error('Trigger:', e.trigger);
     });
     </script>
+    <footer >taiga.inc </footer>
   </body>
 </html>
 

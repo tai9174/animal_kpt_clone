@@ -51,7 +51,7 @@ RSpec.describe 'KPT管理機能', type: :system do
         visit kpts_path
         kpt_list = all('.kpt_row')
         expect(kpt_list[0]).to have_content 'keep_content2'
-        expect(kpt_list[1]).to have_content 'test_keep'
+        expect(kpt_list[1]).to have_content 'keep_content'
       end
     end 
     context 'KPTを編集した場合' do
