@@ -1,7 +1,12 @@
-<%= link_to new_user_registration_path do%>
+
+
 <h1> AnimalKPT</h1>
 <h3>〜振り返りをもっと手軽に〜</h3>
+<% if user_signed_in? %>
+<%else%>
+
 <div>
+<%= link_to new_user_registration_path do%>
   <button class="btn btn-secondary btn-lg" >ユーザー登録</button>
 <%end%>
 </div>
@@ -20,3 +25,4 @@
   <button class="btn btn-secondary btn-lg" >ゲスト管理者ログイン</button>
 <%end%>
 </div>
+<%end%>

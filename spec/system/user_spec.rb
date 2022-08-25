@@ -32,4 +32,15 @@ RSpec.describe 'KPT管理機能', type: :system do
       end
     end
   end
+  describe 'ユーザー詳細のテスト' do
+    context 'ユーザーがユーザーの詳細を見ようとした場合' do
+      it '作成したユーザーログインできる' do
+        visit new_user_registration_path
+        fill_in "user[name]", with:"test_name00"
+        fill_in "user[password]", with:"test_password"
+        fill_in "user[password_confirmation]", with:"test_password"
+        click_on "登録"
+        expect(page).to have_content 'test_name00のKpts'
+      end
+    end  
 end
