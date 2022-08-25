@@ -20,13 +20,13 @@ RSpec.describe Kpt, type: :model do
         expect(empty_problem_content).not_to be_valid
       end
     end
-    context 'keep_contentが130より多い場合' do
+    context 'keep_contentが140より多い場合' do
       it 'バリデーションエラー(keep_contentの文字数制限)となり失敗する' do
         too_much_keep_content = FactoryBot.build(:kpt, keep_content: "a"*131)
         expect(too_much_keep_content).not_to be_valid
       end
     end
-    context 'problem_contentが130より多い場合' do
+    context 'problem_contentが140より多い場合' do
       it 'バリデーションエラー(problem_contentの文字数制限)となり失敗する' do
         too_much_problem_content = FactoryBot.build(:kpt, problem_content:"a"*131)
         expect(too_much_problem_content).not_to be_valid

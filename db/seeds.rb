@@ -1,5 +1,5 @@
 
-User.create!(name:"大雅",password:"kanrisya",admin: true)
+User.create!(name:"大雅",password:"111111",admin: true)
 User.create!(name:"あおのたけし",password:"000000",admin: false)
 User.create!(name:"Taro",password:"000000",admin: false)
 User.create!(name:"けんと",password:"000000",admin: false)
@@ -63,6 +63,7 @@ Kpt.create!(
   keep_content:"8/12 KPT\nKeep\n・コンフリクトの直し方が分かり、少し心に余裕ができた。\n・ER図のあるテーブルが不要だと気付けた。（メンターさんと意見が一致した）",
   keep_status:rand(0..2),
   problem_content:"8/12 KPT\nProblem\n・卒業課題の進みが遅い。\n・コミットメッセージのだれに向けて、どのような書き方をすればよいか分からない。",
+  problem_status:rand(0..2),
   try_content:"8/13 KPT\nTry\n・コミット一覧を見るのはいつ、だれが、なぜ見るかを把握する。（コミットメッセージの書き方の参考とするため）\n・TOP画面を生成する。",
   try_status:rand(0..2),
   favorite: true,
@@ -81,7 +82,7 @@ Kpt.create!(
 )
 Kpt.create!(
   date:(Time.now.-3.day),
-  keep_content:"8/9 KPT\nKeep\n・外部キーとアソシエーションの違いを理解できた。\n・「has_many」・「has_one、belongs_to」というグループではなく、「has_many、has_one」・「belongs_to」というグループ分けになっていることを理解できた。\n・ダミーアプリにransackを実装できた。",
+  keep_content:"8/9 KPT\nKeep\n・外部キーとアソシエーションの違いを理解できた。\n・「has_many」・「has_one、belongs_to」というグループではなく、「has_many、has_one」・「belongs_to」というグループ分けになっていることを理解できた。",
   keep_status:rand(0..2),
   problem_content:"8/9 KPT\nProgram\n・カタログ設計についてアドバイスが難しい\n・zenhubというgithubの拡張機能があり、それでガントチャート機能を使えるようになったが、まだ既存機能とのコネクションの理解が不明。",
   problem_status:rand(0..2),
@@ -106,6 +107,7 @@ Kpt.create!(
   keep_content:"8/12 KPT\nKeep\n・グループワークのお陰でコンフリクト対する恐怖心が軽減された。\n※万葉課題の時にコンフリクトをしていたので。",
   keep_status:rand(0..2),
   problem_content:"Problem\n・テンプレートが読み込まれないエラーの原因が、ファイル名の前に半角空白をつけていた。\n・色んな記事を参考に進めていて、しっかり理解をしながらやっていないため色んな記事が混ざ理、どこで何をしてるか分からなくなった。",
+  problem_status:rand(0..2),
   try_content:"・実装を明日までに終わらせる。\n・集中力が切れたら、JavaScriptのやってみたい機能は決まってるので、どこにどうやって書いていくのかなどを調べながら時間を無駄にせず進める。",
   try_status:rand(0..2),
   favorite: true,
@@ -113,7 +115,7 @@ Kpt.create!(
 )
 Kpt.create!(
   date:(Time.now.-2.day),
-  keep_content:"8/10 KPT\n Keep\n・ソニックガーデンさんの技術相談において特に勉強になったのが、1番最初の設計の考え方、管理についてどこまで細分化するや、具体的な現場での仕事の進め方、タスク管理(GitHub Project)など、今後のアプリ制作において（フロントエンドでも）とても重要なところを知ることができた。",
+  keep_content:"8/10 KPT\n Keep\n・ソニックガーデンさんの技術相談において特に勉強になったのが、1番最初の設計の考え方、管理についてどこまで細分化するや、具体的な現場での仕事の進め方、タスク管理など、今後のアプリ制作においてとても重要なところを知ることができた。",
   keep_status:rand(0..2),
   problem_content:"Problem\n・タスクの細分化が足りないと気づく。JavaScriptややってみたいことがてんこ盛りだが、いったんここで気づいた細かいタスクを洗い出す必要がある。",
   problem_status:rand(0..2),
@@ -149,6 +151,7 @@ Kpt.create!(
   keep_content:"8/12 KPT\nkeep\n・Issueの細分化ができた。\n・コンフリクトが起きた際の解消方法を知ることができた。",
   keep_status:rand(0..2),
   problem_content:"problem\n・ペースが遅いので計画を立てる。",
+  problem_status:rand(0..2),
   try_content:"try\n・基盤となるページを作成し、必要なgemを導入する。",
   try_status:rand(0..2),
   favorite: true,
@@ -226,6 +229,7 @@ Kpt.create!(
   keep_content:"8/8 KPT\nkeep\n・卒業生のアプリを見て想像が広がる。",
   keep_status:rand(0..2),
   problem_content:"problem\n・カタログ設計の商品概要がまとまらず、自分の国語力とまとめる力の無さに泣。",
+  problem_status:rand(0..2),
   try_content:"try\n・問題と解決案をもっと掘り下げてまとめる。\n・アプリ作成においてリサーチしたこと、ママ友意見をまとめる。",
   try_status:rand(0..2),
   favorite: true,
@@ -236,6 +240,7 @@ Kpt.create!(
   keep_content:"8/12 KPT\nKeep\nコンフリクトの解消手順について、理解を深めることができた。\n\n技術相談の内容をテーブル設計・ER図に反映させることができた。\n\n本番環境でletter_openerを適用することができた。",
   keep_status:rand(0..2),
   problem_content:"Problem\n調べても解消できないことが多い\ngem ranked-modelが機能しない\n引越日まで残り何日か算出する方法も分からない…",
+  problem_status:rand(0..2),
   try_content:"Try\n並べ替え後の状態を維持できる方法を調べる\n(ページ遷移や画面更新後に、並べ替え前の状態に戻らないようにする)",
   try_status:rand(0..2),
   favorite: true,
@@ -256,9 +261,9 @@ Kpt.create!(
   date:(Time.now.-3.day),
   keep_content:"8/9 KPT\n\nKeep\nissueの作成と計画を立てることができた。\nこれから空き時間に調べる内容を整理できた。",
   keep_status:rand(0..2),
-  problem_content:"",
+  problem_content:"なし",
   problem_status:rand(0..2),
-  try_content:"Try\nログイン後にユーザーの詳細ページへの遷移-可\nアプリに実装する\n\nユーザーのshowを作成\nデフォルトだとroot先に遷移するため、遷移先の変更を行う\napp/controllers/application_controller.rb\ndef after_sign_in_path_for(resource)\nリダイレクト先のパス\nend",
+  try_content:"Try\nログイン後にユーザーの詳細ページへの遷移-可\nアプリに実装する\n\nユーザーのshowを作成\nデフォルトだとroot先に遷移するため、遷移先の変更を行う",
   try_status:rand(0..2),
   favorite: false,
   user_id:"6"
@@ -269,7 +274,7 @@ Kpt.create!(
   keep_status:rand(0..2),
   problem_content:"Problem\n作成に時間がかかる\nスケジュールを組み直す",
   problem_status:rand(0..2),
-  try_content:"Try\n\nイシューを活用して、要件定義した内容を整理。1日でどこまで終わらせるかを決めて進める。1タスクにかかる時間を見積もる\n\n平日は優先度"高"かつ実装のイメージができていないところから重点的に進める\n\n質問待ちの時間や休日は、新しい内容(gem関係)の基礎をおさえる",
+  try_content:"Try\n\nイシューを活用して、要件定義した内容を整理。1日でどこまで終わらせるかを決めて進める。1タスクにかかる時間を見積もる\n\n平日は優先度高かつ実装のイメージができていないところから重点的に進める\n\n質問待ちの時間や休日は、新しい内容(gem関係)の基礎をおさえる",
   try_status:rand(0..2),
   favorite: false,
   user_id:"6"
@@ -279,6 +284,7 @@ Kpt.create!(
   keep_content:"8/12KPT\nkeep\nER図、ワイヤーフレームを同時に進めることで要件定義の全体像が見えてきた、大幅に進んだ",
   keep_status:rand(0..2),
   problem_content:"Problem\n細部の要件に翻弄されている感がある",
+  problem_status:rand(0..2),
   try_content:"Try\n大枠の機能を完成させることに集中する",
   try_status:rand(0..2),
   favorite: true,
@@ -323,6 +329,7 @@ Kpt.create!(
   keep_content:"8/12 KPT\nkeep\n投稿記事の下書き保存機能を送信ボタンを2つ用意することでパラメータの送り方に苦労したが、コントローラーで分岐し下書きと投稿を分けることができた。\nコントローラーのコード量が多くなることについてメンターさんに相談できた。",
   keep_status:rand(0..2),
   problem_content:"problem\nBlumaについて調べることができなかった。原因は実装を急ぐことに焦りを感じているためまずは機能の実装を優先してしまったことにある。",
+  problem_status:rand(0..2),
   try_content:"try\nGem wickedを使ってウィザード形式の入力フォームを実装しようとしていたがdeviseとの兼ね合いで難しいためgemを使わずに実装を試してみる。",
   try_status:rand(0..2),
   favorite: true,
@@ -352,7 +359,7 @@ Kpt.create!(
 )
 Kpt.create!(
   date:(Time.now.-4.day),
-  keep_content:"8/8 KPT\nKeep\n適宜休憩をとり進めることができた。\n体調悪化時に考えたissueに不足があり思いつく限り追加した。Issueが細かくなったが、1機能ずつ確実に実装できそう。\nIssueにラベルを取り入れた。\ndeviseでのユーザーsign_up、log_in機能の実装完",
+  keep_content:"8/8 KPT\nKeep\n適宜休憩をとり進めることができた。\n体調悪化時に考えたissueに不足があり思いつく限り追加した。",
   keep_status:rand(0..2),
   problem_content:"problem\nissueがうまく整理できず、思いつくままに記載したため、実装の順番などは無視したものになってしまった。\n完成までのプロセスの詳細が想像できない",
   problem_status:rand(0..2),
@@ -366,6 +373,7 @@ Kpt.create!(
   keep_content:"8/12 KPT\nKeep\n・ワークを通して、コンフリクトの解消の仕方の理解が深まりました。",
   keep_status:rand(0..2),
   problem_content:"Problem\n・コメント機能をAjaxで実装したが、リロードしないと表示されない不具合",
+  problem_status:rand(0..2),
   try_content:"Try\n・Ajaxの理解ができていないので、理解を深める。\n・フォロー機能を実装する",
   try_status:rand(0..2),
   favorite: true,
@@ -409,6 +417,7 @@ Kpt.create!(
   keep_content:"8/12 87日目 KPT 9時間 計664時間\n\n○進捗\n卒業課題\n\n■keep\n・アプリの肝である「ランダムにニックネームを付ける機能」の実装に成功!!\n・SGさんから頂いたアドバイスを元に、きちんと自分の言葉(コード)で書けた。",
   keep_status:rand(0..2),
   problem_content:"■problem\n・スケジュールが押しているので急ぐ。\n・チャット機能に使う新しい技術についての理解がまだ足りない。",
+  problem_status:rand(0..2),
   try_content:"■try\n明日からチャットに着手するので、今日しっかり調べる",
   try_status:rand(0..2),
   favorite: true,
@@ -429,16 +438,16 @@ Kpt.create!(
   date:(Time.now.-3.day),
   keep_content:"8/9 85日目 KPT 8時間 計648時間\n\n○進捗\n卒業課題\n\n■keep\n・目標としていたところまで作業できた\n・ファシリ、上手く話せている気がする\n・エラーへの対応力がまた一段と上がっている",
   keep_status:rand(0..2),
-  problem_content:"■problem\n同期生が卒業課題のアイディア出しをしている中で、なかなかいい解決策を纏めきれなかった…\n形にしようとすると様々な問題が出てきた。\n・既存のサイトが溢れかえっている\n・解決したい課題は明確だが、それに対する解決策が幅広い＆壮大過ぎて焦点を定めきれない\n・実現したい事と技術の壁",
+  problem_content:"■problem\n同期生が卒業課題のアイディア出しをしている中で、なかなかいい解決策を纏めきれなかった…\n形にしようとすると様々な問題が出てきた。\n・既存のサイトが溢れかえっている\n・解決したい課題は明確だが、それに対する解決策が幅広い&壮大過ぎて焦点を定めきれない",
   problem_status:rand(0..2),
-  try_content:"■try\n・昨日のproblemに関して。\n→いい助言が出来ず悔いは残るが、方向性が見えてきたようなので、他の部分でサポート出来るよう心構えをしておく。\n・上手く話せている事に関して。\n→以前までと何が違っているのか書き出す。\n→そのために、話している時にどう思考しているか気づくよう心掛ける。",
+  try_content:"■try\n・昨日のproblemに関して。\n→いい助言が出来ず悔いは残るが、方向性が見えてきたようなので、他の部分でサポート出来るよう心構えをしておく。\n・上手く話せている事に関して。\n→以前までと何が違っているのか書き出す。",
   try_status:rand(0..2),
   favorite: false,
   user_id:"10"
 )
 Kpt.create!(
   date:(Time.now.-4.day),
-  keep_content:"8/8 84日目 KPT 25時間 計640時間(土日分含む)\n\n○進捗\ndevise test app\n卒業課題\n\n■keep\n・GitHubのissue内サブ機能が、得意なタスクバラしをアップグレードしてくれる頼もしい存在になりそうだと判明。\n・自作のemoji prefixチートシートを5月期生に共有できた",
+  keep_content:"8/8 84日目 KPT 25時間 計640時間(土日分含む)\n\n○進捗\ndevise test app\n卒業課題\n\n■keep\n・GitHubのissue内サブ機能が、得意なタスクバラしをアップグレードしてくれる頼もしい存在になりそうだと判明。",
   keep_status:rand(0..2),
   problem_content:"■problem\n・カレントディレクトリを間違えて「?」となるミスをまたやってしまった",
   problem_status:rand(0..2),
@@ -452,6 +461,7 @@ Kpt.create!(
   keep_content:"8/13 KPT\nkeep\n・今日のワークでコンフリクトの解消の仕方が分かってよかった。",
   keep_status:rand(0..2),
   problem_content:"problem\n・テーブル設計に時間をかかりすぎた。\n・今日のワークでターミナルで色々実行する際にまだコマンドを覚えれてないなっていうのと英語のスペルが壊滅的だと感じた。",
+  problem_status:rand(0..2),
   try_content:"try\n・1対多なのか多対多なのかをいしきしながら必要なテーブルをつくる。",
   try_status:rand(0..2),
   favorite: true,
@@ -495,6 +505,7 @@ Kpt.create!(
   keep_content:"□8/12 77日目 KPT\n\nkeep\n・gemの検証すべき機能に気づけた\n→検証によってdeviseの理解が深まった\n\n・issueを立てる際に機能を細分化できた\n→要件定義に変更したい点が出てきた\n→早めにメンターさんに相談と依頼をする",
   keep_status:rand(0..2),
   problem_content:"problem\n\ni. お昼まで集中のスイッチが入らなかった\n→緊張感が足りない、、、",
+  problem_status:rand(0..2),
   try_content:"try\ni. 同期生の課題共有やGitHubを見てモチベーションを高める",
   try_status:rand(0..2),
   favorite: true,
@@ -538,6 +549,7 @@ Kpt.create!(
   keep_content:"8/12(金) KPT\nKeep\n-ワークでコンフリクトの解消方法の理解が深まった。\n（VSCodeの機能で簡単にどっちの変更を採用するか選択できることもわかった）\n-deviseの実装について、大体理解できた。",
   keep_status:rand(0..2),
   problem_content:"Problem\n-deviseの勉強に思ったより時間がかかってしまった。",
+  problem_status:rand(0..2),
   try_content:"Try\n-触れたことのない技術の習得時間は予定の3倍くらいかかるつもりで、スケジュールを見直す。\n（残り必須のgemとしてchartkickがあるので、そこの実装を余裕をもってできるように制作を進める）",
   try_status:rand(0..2),
   favorite: true,
@@ -567,7 +579,7 @@ Kpt.create!(
 )
 Kpt.create!(
   date:(Time.now.-4.day),
-  keep_content:"Keep\n-画面遷移図作成を通じて、http://draw.ioと仲良くなれた&カタログ設計の見直しになった\n-絵文字コミットメッセージが思ってたより目立つ＆可愛いとわかったので、さっそく卒業制作を「🎉initial commit」でpushしてみた。",
+  keep_content:"Keep\n-画面遷移図作成を通じて、http://draw.ioと仲良くなれた&カタログ設計の見直しになった\n-絵文字コミットメッセージが思ってたより目立つ&可愛いとわかったので、さっそく卒業制作を「🎉initial commit」でpushしてみた。",
   keep_status:rand(0..2),
   problem_content:"Problem\n-自分が「設計」が非常に苦手（嫌い？）だと言うことがわかった。\n（マネジメント向いてなさそう）\n（今後、設計関連の知識を習得して、苦手意識のハードルを下げる必要がある）\n\n本日の学習結果\n-画面遷移図完成、ワイヤーフレーム途中まで",
   problem_status:rand(0..2),
@@ -578,14 +590,22 @@ Kpt.create!(
 )
 
 
+Team.create!(team_name:"5月期フルタイム",user_id: "1")
+Team.create!(team_name:"テストチーム1",user_id: "1")
+Team.create!(team_name:"テストチーム2",user_id: "1")
+Team.create!(team_name:"テストチーム3",user_id: "1")
+Team.create!(team_name:"テストチーム4",user_id: "1")
 
-User.all.each do |user|
-  user.teams.create!(
-    team_name:"team(#{user.name})"
-  )
-end
 JoinTeam.create!(user_id: "1", team_id:"1")
 JoinTeam.create!(user_id: "2", team_id:"1")
 JoinTeam.create!(user_id: "3", team_id:"1")
 JoinTeam.create!(user_id: "4", team_id:"1")
 JoinTeam.create!(user_id: "5", team_id:"1")
+JoinTeam.create!(user_id: "6", team_id:"1")
+JoinTeam.create!(user_id: "7", team_id:"1")
+JoinTeam.create!(user_id: "8", team_id:"1")
+JoinTeam.create!(user_id: "9", team_id:"1")
+JoinTeam.create!(user_id: "10", team_id:"1")
+JoinTeam.create!(user_id: "11", team_id:"1")
+JoinTeam.create!(user_id: "12", team_id:"1")
+JoinTeam.create!(user_id: "13", team_id:"1")
