@@ -32,4 +32,32 @@ RSpec.describe 'KPT管理機能', type: :system do
       end
     end
   end
+  describe 'プロフィール機能のテスト' do
+    context 'プロフィール画面表示した場合' do
+      it 'ユーザーの名前が表示される' do
+        visit new_user_session_path
+        fill_in "user[name]", with:"admin_name"
+        fill_in "user[password]", with:"admin_password"
+        click_on "ログイン"
+        visit users_show_path
+        expect(page).to have_content 'admin_name'
+      end
+    end
+    context 'プロフィールを編集した場合' do
+      it 'ユーザーが編集される' do
+        visit new_user_session_path
+        fill_in "user[name]", with:"test_name"
+        fill_in "user[password]", with:"test_password"
+        click_on "ログイン"
+        visit users_show_path
+        visit edit_user_registration_path
+        fill_in "user[name]", with:"test_name1"
+        fill_in "user[password]", with:"test_password1"
+        fill_in "user[:password_confirmation]", with:"test_password1"
+        fill_in "user[current_password]", with:"test_password"  
+        click_on "更新"
+        expect(page).to have_content 'admin_name'
+      end
+    end
+  end
 end
