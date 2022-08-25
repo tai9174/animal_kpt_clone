@@ -81,5 +81,13 @@ RSpec.describe 'KPT管理機能', type: :system do
         expect(page).to have_content 'favorite_content'
       end
     end
+    context 'KPTをお気に入りのkptがない場合' do
+      it 'お気に入り一覧に表示されない' do
+        kpt= FactoryBot.create(:kpt, keep_content:"unfavorite_content", user: user)
+        visit kpts_path
+        visit favorits_index_path
+        expect(page).to_not have_content 'unfavorite_content'
+      end
+    end
   end
 end
