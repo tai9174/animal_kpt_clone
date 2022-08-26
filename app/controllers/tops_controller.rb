@@ -3,6 +3,10 @@ class TopsController < ApplicationController
   
   
   def index
+    if user_signed_in?
+      redirect_to kpts_path
+    end
+
   end
   
   def help

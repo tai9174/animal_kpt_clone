@@ -1,27 +1,4 @@
 <p id="notice"><%= notice %></p>
 <h1> AnimalKPT</h1>
 <h3>〜振り返りをもっと手軽に〜</h3>
-<% if user_signed_in? %>
-<%else%>
 
-<div>
-<%= link_to new_user_registration_path do%>
-  <button class="btn btn-secondary btn-lg" >ユーザー登録</button>
-<%end%>
-</div>
-<div>
-<%= link_to new_user_session_path do %>
-  <button class="btn btn-secondary btn-lg" >ログイン</button>
-<%end%>
-</div>
-<div>
-<%= link_to users_guest_sign_in_path, method: :post do%>
-  <button class="btn btn-secondary btn-lg" >ゲストログイン</button>
-<%end%>
-</div>
-<div>
-<%= link_to users_guest_admin_sign_in_path, method: :post do%>
-  <button class="btn btn-secondary btn-lg" >ゲスト管理者ログイン</button>
-<%end%>
-</div>
-<%end%>
