@@ -4,7 +4,7 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :ニックネーム %><br />
+    <%= f.label :ニックネーム %>
     <%= f.text_field :name, autofocus: true, autocomplete: "name",placeholder: "3文字以上" %>
   </div>
   
@@ -14,7 +14,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '変更がなければ空欄' %>
   </div>
 
