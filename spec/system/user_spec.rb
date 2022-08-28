@@ -10,7 +10,7 @@ RSpec.describe 'KPT管理機能', type: :system do
         fill_in "user[password]", with:"test_password"
         fill_in "user[password_confirmation]", with:"test_password"
         click_on "登録"
-        expect(page).to have_content 'test_name00のKpts'
+        expect(page).to have_content 'test_name00のKPT一覧'
       end
     end  
     context 'ログインせずマイKPT一覧画面に飛ぼうとした場合' do

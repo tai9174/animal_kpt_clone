@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
     end
     context '名前が文字不足の場合' do
       it 'バリデーションエラー(nameの文字数制限)となり失敗する' do
-        not_enough_name = FactoryBot.build(:user, name: 'na')
+        not_enough_name = FactoryBot.build(:user, name: 'n')
         expect(not_enough_name).not_to be_valid
       end
     end
