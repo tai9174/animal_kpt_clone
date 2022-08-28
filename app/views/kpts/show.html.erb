@@ -53,11 +53,11 @@
   <strong>Try :</strong>
 </p>
   <% if @kpt.try_status == "◎少し達成◎" %>
-    <p style="height: 250px; width: 350px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #FFFFCC;text-align:left" id="try-area">
+    <p style="height: 250px; width: 350px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #FFFFCC;text-align:left;" id="try-area">
   <% elsif @kpt.try_status == "◎達成◎"%>
-    <p style="height: 250px; width: 350px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #CCFFFF;text-align:left" id="try-area">
+    <p style="height: 250px; width: 350px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #CCFFFF;text-align:left;" id="try-area">
   <%else %>
-    <p style="height: 250px; width: 350px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #FFCCCC;text-align:left" id="try-area">
+    <p style="height: 250px; width: 350px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #FFCCCC;text-align:left;" id="try-area">
   <%end %>
   <%=safe_join(@kpt.try_content.split("\n"),tag(:br))%>
 </p>
@@ -78,3 +78,6 @@
 
 <%= link_to '編集', edit_kpt_path(@kpt) %> |
 <%= link_to '戻る', kpts_path %>
+<br>
+<br>
+<br>

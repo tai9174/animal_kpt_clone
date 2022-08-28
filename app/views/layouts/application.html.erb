@@ -3,9 +3,7 @@
   <head>
     <title>AnimalKPT</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    
+    <%= csp_meta_tag %>   
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -16,46 +14,52 @@
       <%= link_to tops_index_path, target: "_self" do %>
         <%= image_tag "logo.png" %>
       <% end %>
-      <%= link_to users_show_path, target: "_self" do %>
-        <%= image_tag "user.png" %>
-        <%= current_user.name%>さん
-      <% end %>
-      <%= link_to tops_index_path, target: "_self" do %>
-        <%= image_tag "kpt.png" %>
-        マイKPT
-      <% end %>
-      <%= link_to teams_path, target: "_self" do %>
-        <%= image_tag "team.png" %>
-        チーム
-      <% end %>
-      <%= link_to destroy_user_session_path, method: :delete, target: "_self" do %>
-        <%= image_tag "logout.png" %>
-        ログアウト
-      <% end %>
+      <div class= "nav">
+        <%= link_to users_show_path, target: "_self" do %>
+          <%= image_tag "user.png" %>
+          <%= current_user.name%>さん
+        <% end %>
+        <%= link_to tops_index_path, target: "_self" do %>
+          <%= image_tag "kpt.png" %>
+          マイKPT
+        <% end %>
+        <%= link_to teams_path, target: "_self" do %>
+          <%= image_tag "team.png" %>
+          チーム
+        <% end %>
+        <%= link_to destroy_user_session_path, method: :delete, target: "_self" do %>
+          <%= image_tag "logout.png" %>
+          ログアウト
+        <% end %>
+      </div>      
+    </header>
   <% else %>
     <header>
-      <%= link_to tops_index_path, target: "_self" do %>
-        <%= image_tag "lion.png" %>
-        トップ
-      <% end %>
-      <%= link_to new_user_registration_path, target: "_self" do %>
-        <%= image_tag "monkey.png" %>
-        ユーザー登録
-      <% end %>
-      <%= link_to new_user_session_path, target: "_self" do %>
-        <%= image_tag "login.png" %>
-        ログイン
-      <% end %>
-      <%= link_to users_guest_sign_in_path, method: :post, target: "_self" do %>
-        <%= image_tag "owl.png" %>
-        ゲストログイン
-      <% end %>
-      <%= link_to users_guest_admin_sign_in_path, method: :post, target: "_self" do %>
-        <%= image_tag "dog.png" %>
-        ゲスト管理者ログイン
-      <% end %>
-  <% end %>
+      <div class= "nav1">
+        <%= link_to tops_index_path, target: "_self" ,:style=>'margin-left:20px;' do %>
+          <%= image_tag "lion.png" %>
+          トップ
+        <% end %>
+        <%= link_to new_user_registration_path, target: "_self" do %>
+          <%= image_tag "monkey.png" %>
+          ユーザー登録
+        <% end %>
+        <%= link_to new_user_session_path, target: "_self" do %>
+          <%= image_tag "login.png" %>
+          ログイン
+        <% end %>
+        <%= link_to users_guest_sign_in_path, method: :post, target: "_self" do %>
+          <%= image_tag "owl.png" %>
+          ゲストログイン
+        <% end %>
+        <%= link_to users_guest_admin_sign_in_path, method: :post, target: "_self" do %>
+          <%= image_tag "dog.png" %>
+          ゲスト管理者ログイン
+        <% end %>
+      </div>
     </header>
+  <% end %>
+    
     <%= yield %>
     <!-- clipboard.js -->
     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
