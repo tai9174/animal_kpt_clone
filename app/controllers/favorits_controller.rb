@@ -3,11 +3,11 @@ class FavoritsController < ApplicationController
 
 
   def index
-    @kpts = current_user.kpts 
-    @favorite_kpts=[]
+    @kpts = current_user.kpts
+    @favorite_kpts =[]
     @kpts.each do |kpt|
       if kpt.favorite == true
-        @favorite_kpts<< kpt
+        @favorite_kpts << kpt
       end
     end
   end
