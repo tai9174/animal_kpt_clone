@@ -76,7 +76,7 @@ class TeamsController < ApplicationController
     @day0_kpts=[]
     @join_team_users.each do |join_team_user|
       join_team_user.kpts.each do |kpt|
-        if kpt.date.strftime('%Y/%m/%d')== Time.now.strftime('%Y/%m/%d')
+        if kpt.date.strftime('%Y/%-m/%d')== Time.now.strftime('%Y/%-m/%d')
           @day0_kpts<< kpt
         end
       end
@@ -90,7 +90,7 @@ class TeamsController < ApplicationController
     @day_1_kpts=[]
     @join_team_users.each do |join_team_user|
       join_team_user.kpts.each do |kpt_1|
-        if kpt_1.date.strftime('%Y/%m/%d')== (Time.now.-1.day).strftime('%Y/%m/%d')
+        if kpt_1.date.strftime('%Y/%-m/%d')== (Time.now.-1.day).strftime('%Y/%-m/%d')
           @day_1_kpts<< kpt_1
         end
       end
@@ -103,7 +103,7 @@ class TeamsController < ApplicationController
     @day_2_kpts=[]
     @join_team_users.each do |join_team_user|
       join_team_user.kpts.each do |kpt_2|
-        if kpt_2.date.strftime('%Y/%m/%d')== (Time.now.-2.day).strftime('%Y/%m/%d')
+        if kpt_2.date.strftime('%Y/%-m/%d')== (Time.now.-2.day).strftime('%Y/%-m/%d')
           @day_2_kpts<< kpt_2
         end
       end
@@ -116,7 +116,7 @@ class TeamsController < ApplicationController
     @day_3_kpts=[]
     @join_team_users.each do |join_team_user|
       join_team_user.kpts.each do |kpt_3|
-        if kpt_3.date.strftime('%Y/%m/%d')== (Time.now.-3.day).strftime('%Y/%m/%d')
+        if kpt_3.date.strftime('%Y/%-m/%d')== (Time.now.-3.day).strftime('%Y/%-m/%d')
           @day_3_kpts<< kpt_3
         end
       end
@@ -129,7 +129,7 @@ class TeamsController < ApplicationController
     @day_4_kpts=[]
     @join_team_users.each do |join_team_user|
       join_team_user.kpts.each do |kpt_4|
-        if kpt_4.date.strftime('%Y/%m/%d')== (Time.now.-4.day).strftime('%Y/%m/%d')
+        if kpt_4.date.strftime('%Y/%-m/%d')== (Time.now.-4.day).strftime('%Y/%-m/%d')
           @day_4_kpts<< kpt_4
         end
       end
@@ -141,7 +141,7 @@ class TeamsController < ApplicationController
     @day_5_kpts=[]
     @join_team_users.each do |join_team_user|
       join_team_user.kpts.each do |kpt_5|
-        if kpt_5.date.strftime('%Y/%m/%d')== (Time.now.-5.day).strftime('%Y/%m/%d')
+        if kpt_5.date.strftime('%Y/%-m/%d')== (Time.now.-5.day).strftime('%Y/%-m/%d')
           @day_5_kpts<< kpt_5
         end
       end
@@ -154,7 +154,7 @@ class TeamsController < ApplicationController
     @day_6_kpts=[]
     @join_team_users.each do |join_team_user|
       join_team_user.kpts.each do |kpt_6|
-        if kpt_6.date.strftime('%Y/%m/%d')== (Time.now.-6.day).strftime('%Y/%m/%d')
+        if kpt_6.date.strftime('%Y/%-m/%d')== (Time.now.-6.day).strftime('%Y/%-m/%d')
           @day_6_kpts<< kpt_6
         end
       end
@@ -166,7 +166,7 @@ class TeamsController < ApplicationController
     @day_7_kpts=[]
     @join_team_users.each do |join_team_user|
       join_team_user.kpts.each do |kpt_7|
-        if kpt_7.date.strftime('%Y/%m/%d')== (Time.now.-7.day).strftime('%Y/%m/%d')
+        if kpt_7.date.strftime('%Y/%-m/%d')== (Time.now.-7.day).strftime('%Y/%-m/%d')
           @day_7_kpts<< kpt_7
         end
       end

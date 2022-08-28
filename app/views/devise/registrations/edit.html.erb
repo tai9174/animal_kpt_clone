@@ -1,25 +1,26 @@
+<br>
 <h2>ユーザー 編集</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :ニックネーム %><br />
+    <%= f.label :ニックネーム %><br>
     <%= f.text_field :name, autofocus: true, autocomplete: "name",placeholder: "3文字以上" %>
   </div>
   
   <div class="field">
-    <%= f.label :password %> 
+    <%= f.label :password %><br> 
     <%= f.password_field :password, autocomplete: "new-password", placeholder: '変更がなければ空欄' %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '変更がなければ空欄' %>
   </div>
 
   <div class="field">
-    <%= f.label :"今のパスワード(変更する場合必須)" %> 
+    <%= f.label :"今のパスワード(変更する場合必須)" %><br> 
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 

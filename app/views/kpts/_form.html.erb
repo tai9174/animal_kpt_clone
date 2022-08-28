@@ -1,7 +1,7 @@
 <%= form_with(model: kpt, local: true) do |form| %>
   <% if kpt.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(kpt.errors.count, "error") %> prohibited this kpt from being saved:</h2>
+      <h2><%= pluralize(kpt.errors.count, "つエラー") %> があります。</h2>
 
       <ul>
         <% kpt.errors.full_messages.each do |message| %>
@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :"keep(最大140字)"%>
-    <%= form.text_area :keep_content,size: "40x8",class: 'form-control  js-text', 
+    <%= form.text_area :keep_content,size: "30x8",class: 'form-control  js-text', 
         rows: 6 , placeholder: '改行の文字数(2文字)'%>
     
     <P class="js-text-count pull-right"></P> 
@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :"problem(最大140字)" %>
-    <%= form.text_area :problem_content , size: "40x8",class: 'form-control  js-text2', rows: 6, placeholder: '改行の文字数(2文字)'%>
+    <%= form.text_area :problem_content , size: "30x8",class: 'form-control  js-text2', rows: 6, placeholder: '改行の文字数(2文字)'%>
 
     <P class="js-text-count2 pull-right"></P>
   </div>
@@ -45,7 +45,7 @@
   
   <div class="field">
     <%= form.label :"try(最大140字)" %>
-    <%= form.text_area :try_content , size: "40x8",class: 'form-control  js-text3', rows: 6, placeholder: '改行の文字数(2文字)'%>
+    <%= form.text_area :try_content , size: "30x8",class: 'form-control  js-text3', rows: 6, placeholder: '改行の文字数(2文字)'%>
 
     <P class="js-text-count3 pull-right"></P>
   </div>

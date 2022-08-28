@@ -1,11 +1,78 @@
-<h1>アプリの使い方</h1>
+<br>
+<h2>アプリの使い方</h2>
 
-<h2>マイKPTについて</h2>
+<h5>Animal　KPTについて</h5>
+  <p style="height: 100px; width: 850px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #CCFFFF;font-size:15px;text-align:left;" >
+    KPT(ケプト)　:Keep(できた/継続すること)　Problem(改善するべき問題点)　Try(挑戦したいこと)<br>
+    3要素を掘り下げ、学習や仕事を改善できるアクションを導き出すツールです。<br><br>
+    Animal　KPT では、達成度を色で別け、「振り返り」をより確実にします。ツイッターと一緒に使えます。
+  </p>
+<br>
+<h5>マイKPTについて</h5>
+  <p style="height: 350px; width: 850px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #FFFFCC;font-size:15px;text-align:left;" >
+    ＜1日のKPTの使い方＞ <br>
+    <br>
+    ①「NEW KPT」を押します。　⇨New　KPTへ <br>
+    ②　New　KPTで日にち、　Keep、　Problem（TryなしでOK） を記入　⇨登録ボタンを押します。　⇨詳細画面へ<br>
+    ③　ツイッターと一緒に使う場合、詳細画面のKeepとProblemをそれぞれコピーして、Twitterに貼ります。<br>
+    ④「戻る」を押します。　⇨マイKPT一覧へ<br>
+    ⑤　次の日に、マイKPT一覧から先日書いたKPT の「編集」を押します。　⇨Edit KPTへ<br>
+    ⑥　Edit KPTでTryを書き加えて「更新ボタン」を押します。⇨詳細画面へ<br>
+    ⑦　詳細画面からTryをコピーしてTwitterに貼ります。<br>
+    ⑧「戻る」を押します。　⇨マイKPT 一覧へ<br><br>
+    ＜振り返り方＞<br><br>
+    テキストの色と達成度：　青⇨達成　黄色⇨少し達成　赤⇨問題<br>
+    「問題」だったのが「達成」できたなど、　変化した場合、「編集」を押します。　⇨Edit KPTから達成度を編集します。<br>
+    後から見直したいKPTには、「編集」からお気に入りに✅→お気に入り一覧から見返せます。<br><br>
+    赤になっているものを重点的に改善していきましょう。
+  </p>
 
-<h2>チームKPTについて</h2>
+<br>
+<h5>チームKPTについて</h5>
+  <p style="height: 200px; width: 850px; padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #FFCCCC;font-size:15px;text-align:left;" >
+  ①　チームアイコンを押します。　⇨チーム一覧へ<br>
+  ②「新チーム」から、チームを作ります。　or　参加したいチームの「詳細」からチームに加ります。<br>
+  ③「チームメンバー」を押します。　⇨からチームメンバーを見れます。<br>
+  ④　チーム名を押します。　⇨チームの本日のKPT見れます。「過去のKPT」を押します。　⇨過去のKPT一覧へ<br>
+  ⑤「過去のKPT」から過去一週間分のKPTが見れます。<br><br>
+  チームで1日のKPTを発表する場合、共有に便利です。<br>
+  </p>
+  <br>
 
+<h5>KPTの書き方</h5>
+  <main style="margin: 0;padding: 0; ">
+    <div style="height: 250px;  padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #CCFFFF;font-size:15px;text-align:left;float:left ;width: 33.3%;" >
+      5/7　KPT <br>
+      Keep<br>
+      朝イチで学習のスケジュールを立てて実行した。<br>
+      50分やって10分休憩をすると継続的に学習ができた。
+    </div>
+    <div style="height: 250px;  padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #FFCCCC;font-size:15px;width: 33.3%;text-align:left;float: left;" >
+      Problem<br>
+      imgタグを書いても画像が反映されない。<br>
+      タグの背景のピンク色が反映されない。<br>
+      →スペルミスか全角の空白があるのか。<br>
+    </div>
+    <div style="height: 250px;  padding: 10px; margin: 0 auto; border: 1px solid #333333;background-color: #FFFFCC;font-size:15px;text-align:left;float: right;width: 33.3%;" >
+      Try<br>
+      ノートに仮説を立てて、チェックリストのようにやる。<br>
+      →同じ間違えを繰り返さないため。<br>
+      imgタグを書いても画像が反映されない。<br>
+      タグの背景のピンク色が反映されない。<br>
+      →スペルミスか全角の空白があるのか。<br>
+    </div>
+  </main>
+  <br>
+<% if user_signed_in? %>
+  <%= link_to '戻る',tops_index_path%>
+<% else%>
+  <%= link_to "ユーザー登録",new_user_registration_path%>|
+  <%= link_to "ログイン",new_user_session_path%>|
+  <%= link_to "ゲストログイン",users_guest_sign_in_path ,method: :post%>|
+  <%= link_to "ゲスト管理者ログイン", users_guest_admin_sign_in_path,method: :post%><br>
+  <%= link_to '戻る',tops_index_path%>
+<% end%>
+<br>
+<br>
 
-
-
-<%= link_to '戻る', kpts_path %>
 

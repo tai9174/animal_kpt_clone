@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get "users/show" => "users#show"
   get "favorits/index" 
   get "tops/help" 
-  root "kpts#index"
+  root "tops#index"
   resources :kpts 
   devise_for :users, controllers: {
     registrations: 'users/registrations'
