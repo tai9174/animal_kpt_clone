@@ -1,11 +1,19 @@
-<h1>アプリの使い方</h1>
+<h2>アプリの使い方</h2>
 
-<h2>マイKPTについて</h2>
+<h5>KPTについて</h5>
 
-<h2>チームKPTについて</h2>
+<h5>マイKPTについて</h5>
 
+<h5>チームKPTについて</h5>
 
+<% if user_signed_in? %>
+  <%= link_to '戻る',tops_index_path%>
+<% else%>
+  <%= link_to "ユーザー登録",new_user_registration_path%>|
+  <%= link_to "ログイン",new_user_session_path%>|
+  <%= link_to "ゲストログイン",users_guest_sign_in_path %>|
+  <%= link_to "ゲスト管理者ログイン", users_guest_admin_sign_in_path %><br>
+  <%= link_to '戻る',tops_index_path%>
+<% end%>
 
-
-<%= link_to '戻る', kpts_path %>
 

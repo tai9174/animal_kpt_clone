@@ -3,25 +3,33 @@ body {
   color: #333;
   margin: 33px; }
 
+
+
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px; }
+  line-height: 18px; 
+
+  a.destroy:hover { 
+    color:#FFCC99; 
+    text-decoration: none;
+    background-color:transparent;}
+
+}
 
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px; }
 
+
 a {
-  color: #000; }
+  color: #666 }
 
 a:visited {
   color: #666; }
 
-a:hover {
-  color: #fff;
-  background-color: #000; }
+  
 
 th {
   padding-bottom: 5px; }
@@ -34,17 +42,24 @@ div.actions {
   margin-bottom: 10px; }
 
 #notice {
-  color: green; }
+  color:  #CCFF66; 
+  font-size:20px;
+
+  height:30px;
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: rgb(243, 145, 145);
   display: table; }
 
 #error_explanation {
-  text-align:center;
+  margin: 0 auto;
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid rgb(243, 145, 145);
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0; 
@@ -52,17 +67,50 @@ div.actions {
 }
 
 #error_explanation h2 {
-  text-align:center;
+  margin: 0 auto;
   font-weight: bold;
   padding: 5px 5px 5px 15px;
-  font-size: 12px;
+  font-size: 15px;
   margin: -7px -7px 0;
-  background-color: #c00;
+  background-color:  rgb(243, 145, 145);
   color: #fff; }
 
 #error_explanation ul li {
-  font-size: 12px;
+  font-size: 15px;
   list-style: square; }
 
 label {
   display: block; }
+
+.form-control {
+  margin: 0 auto;
+  display: block;
+  height: calc(1.5em + 0.75rem + 2px);
+  
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.field_with_errors {
+  margin: 0 auto;
+  padding: 2px;
+  background-color: #f39191;
+  background-size:auto;
+  display: table;
+  
+  
+}
+textarea.form-control {
+  height: auto;
+  width: 600px;
+}
+element.style {
+  width: 60%;
+}

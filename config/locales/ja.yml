@@ -51,9 +51,9 @@ ja:
     - 金曜日
     - 土曜日
     formats:
-      default: "%Y/%m/%d"
+      default: "%Y/%-m/%d"
       long: "%Y年%m月%d日(%a)"
-      short: "%m/%d"
+      short: "%-m/%d"
     month_names:
     -
     - 1月
@@ -123,6 +123,10 @@ ja:
     messages:
       not_saved: 登録できません
       accepted: を受諾してください
+      keep_content: keep
+      problem_content: problem
+      try_content: try
+      date: 日にち
       blank: を入力してください
       confirmation: と%{attribute}の入力が一致しません
       empty: を入力してください
@@ -215,6 +219,6 @@ ja:
     am: 午前
     formats:
       default: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
-      long: "%Y/%m/%d %H:%M"
-      short: "%m/%d %H:%M"
+      long: "%Y/%-m/%d %H:%M"
+      short: "%-m/%d %H:%M"
     pm: 午後

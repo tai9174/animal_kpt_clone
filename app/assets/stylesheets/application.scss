@@ -17,6 +17,15 @@
   @import "bootstrap";
 body{
   text-align:center;
+  color:	#333333	;
+  height: 100%;
+  
+  a:link {color: #666; text-decoration:none }
+  a:hover { color:#FFCC99; text-decoration:none; 
+            background-color:transparent;}
+  a{
+  font-size:20px;
+            }
   }  
 table {
     margin-right: auto;
@@ -30,13 +39,31 @@ header {
   z-index: 9999;
   top: 0px;
   padding-top: 20px;
-  margin: 10px auto;
+  margin: 0px auto 10px auto;
   text-align:center;
+  a:hover { color:#FFFFEE; text-decoration:none; 
+    background-color:transparent;}
+  
   }
 
 footer {
   background: linear-gradient(#FFCC99,#FFCCCC);
-  height:50px;
   text-align:center;
   margin-top: 50px;
+  height: 50px;
+  padding-bottom: 0px;
+  padding-top: 10px;
+  bottom: 0; /*下に固定*/
+  width: 100%;
+  position: sticky;
+  top: 100vh;
+
   }
+td{
+  padding:10px 10px 10px;
+  }
+
+table{
+  padding-bottom: 100px;
+}
+

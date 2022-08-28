@@ -20,6 +20,10 @@
         <%= image_tag "user.png" %>
         <%= current_user.name%>さん
       <% end %>
+      <%= link_to tops_index_path, target: "_self" do %>
+        <%= image_tag "kpt.png" %>
+        マイKPT
+      <% end %>
       <%= link_to teams_path, target: "_self" do %>
         <%= image_tag "team.png" %>
         チーム
@@ -35,7 +39,7 @@
         トップ
       <% end %>
       <%= link_to new_user_registration_path, target: "_self" do %>
-        <%= image_tag "user.png" %>
+        <%= image_tag "monkey.png" %>
         ユーザー登録
       <% end %>
       <%= link_to new_user_session_path, target: "_self" do %>
@@ -74,7 +78,7 @@
       console.error('Trigger:', e.trigger);
     });
     </script>
-    <footer >taiga.inc </footer>
+    <footer >copyright© Animal kpt all rights reserved. </footer>
   </body>
 </html>
 
