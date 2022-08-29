@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :kpt, class: Kpt do
     user
-    date{Date.today}
+    start_time{Date.today}
     keep_content{ 'test_keep' }
     keep_status{2}
     problem_content { 'test_problem' }
@@ -14,7 +14,7 @@ FactoryBot.define do
 
   factory :second_kpt, class: Kpt do
     user
-    date{Date.today-1}
+    start_time{Date.today-1}
     keep_content{ 'test_keep2' }
     keep_status{2}
     problem_content { 'test_problem2' }
@@ -27,7 +27,7 @@ FactoryBot.define do
 
   factory :third_kpt, class: Kpt do
     user
-    date{Date.today-2}
+    start_time{Date.today-2}
     keep_content{ 'test_keep3' }
     keep_status{2}
     problem_content { 'test_problem3' }
@@ -40,7 +40,7 @@ FactoryBot.define do
 
   factory :fourth_kpt, class: Kpt do
     user
-    date{Date.today}
+    start_time{Date.today}
     keep_content{ 'test_keep4' }
     keep_status{2}
     problem_content { 'test_problem4' }
@@ -53,7 +53,7 @@ FactoryBot.define do
 
   factory :fifth_kpt, class: Kpt do
     user
-    date{Date.today-1}
+    start_time{Date.today-1}
     keep_content{ 'test_keep5' }
     keep_status{2}
     problem_content { 'test_problem5' }
@@ -66,7 +66,7 @@ FactoryBot.define do
 
   factory :sixth_kpt, class: Kpt do
     user
-    date{Date.today-2}
+    start_time{Date.today-2}
     keep_content{ 'test_keep6' }
     keep_status{2}
     problem_content { 'test_problem6' }

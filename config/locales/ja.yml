@@ -6,7 +6,7 @@ ja:
   activerecord:
     attributes:
       kpt:
-        date: 日にち
+        start_time: 日にち
         keep_content: Keep
         problem_content: Problem
         try_content:  Try

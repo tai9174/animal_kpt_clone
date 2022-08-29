@@ -11,5 +11,4 @@ class FavoritsController < ApplicationController
       end
     end
   end
-
 end

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Kpt, type: :model do
   describe 'Kpt新規登録テスト' do
-    context 'keep_contentとproblem_contentが規定の文字数でdateも選択している' do
+    context 'keep_contentとproblem_contentが規定の文字数でstart_timeも選択している' do
       it 'Kptが新規で作成される' do
         enough_info = FactoryBot.build(:kpt)
         expect(enough_info).to be_valid
@@ -32,10 +32,10 @@ RSpec.describe Kpt, type: :model do
         expect(too_much_problem_content).not_to be_valid
       end
     end
-    context 'dateが空の場合' do
-      it 'バリデーションエラー(dateのNull制約)となり失敗する' do
-        empty_date = FactoryBot.build(:kpt, date: nil)
-        expect(empty_date).not_to be_valid
+    context 'start_timeが空の場合' do
+      it 'バリデーションエラー(start_timeのNull制約)となり失敗する' do
+        empty_start_time = FactoryBot.build(:kpt, start_time: nil)
+        expect(empty_start_time).not_to be_valid
       end
     end
   end

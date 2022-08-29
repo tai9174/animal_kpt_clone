@@ -4,7 +4,7 @@ class KptsController < ApplicationController
 
   # GET /kpts or /kpts.json
   def index
-    @kpts = current_user.kpts.order(date: :desc)
+    @kpts = current_user.kpts.order(start_time: :desc)
     @kpts = @kpts.page(params[:page]).per(10)
   end
 
@@ -70,10 +70,12 @@ class KptsController < ApplicationController
       end
     end
   end
-  
+
   def day_kpt
   end
 
+
+  
   private
     # Use callbacks to share common setup or constraints between actions.
   def set_kpt
@@ -82,6 +84,6 @@ class KptsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def kpt_params
-    params.require(:kpt).permit(:keep_content, :keep_status, :problem_content, :problem_status, :try_content, :try_status, :favorite,:date)
+    params.require(:kpt).permit(:keep_content, :keep_status, :problem_content, :problem_status, :try_content, :try_status, :favorite,:start_time)
   end
 end

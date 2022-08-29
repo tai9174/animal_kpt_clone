@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2022_08_22_001350) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
-    t.datetime "date"
+    t.datetime "start_time"
     t.index ["user_id"], name: "index_kpts_on_user_id"
   end
 
