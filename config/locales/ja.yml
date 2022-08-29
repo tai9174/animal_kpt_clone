@@ -5,15 +5,25 @@ ja:
     week: 週
   activerecord:
     attributes:
+      kpt:
+        date: 日にち
+        keep_content: Keep
+        problem_content: Problem
+        try_content:  Try
       user:
-        name: ニックネーム
+        name: ニック
         password: パスワード
         email: メールアドレス
         password_confirmation: パスワード確認
         current_password: 現在のパスワード
       team:
         team_name: チーム名
+        
     errors:
+      Keep_content: Keep
+      Problem content: Problem
+      Try content: Try
+      Date: 日にち
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
         restrict_dependent_destroy:
@@ -123,10 +133,10 @@ ja:
     messages:
       not_saved: 登録できません
       accepted: を受諾してください
-      keep_content: keep
-      problem_content: problem
-      try_content: try
-      date: 日にち
+      Keep_content: Keep
+      Problem_content: Problem
+      Try_content: Try
+      Date: 日にち
       blank: を入力してください
       confirmation: と%{attribute}の入力が一致しません
       empty: を入力してください

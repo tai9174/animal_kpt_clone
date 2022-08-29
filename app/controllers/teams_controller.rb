@@ -174,16 +174,47 @@ class TeamsController < ApplicationController
   end
   def calendar
     @team = Team.find(params[:team_id])
-    # @team_kpts=@team.join_team_users.kpts
     @join_team_users= @team.join_team_users
+    @day0_kpts=[]
+    @day_1_kpts=[]
+    @day_2_kpts=[]
+    @day_3_kpts=[]
+    @day_4_kpts=[]
+    @day_5_kpts=[]
+    @day_6_kpts=[]
+    @day_7_kpts=[]
+    @weekday_kpts=[]
     @join_team_users.each do |join_team_user|
-      @join_kpts=join_team_user.kpts.order(date: :desc)
-      @join_kpts.each do |join_kpt|
-        @join_kpt=join_kpt
+      join_team_user.kpts.each do |kpt|
+        if kpt.date.strftime('%Y/%-m/%d')== Time.now.strftime('%Y/%-m/%d')
+          @day0_kpts<< kpt
+        elsif kpt.date.strftime('%Y/%-m/%d')== (Time.now.-1.day).strftime('%Y/%-m/%d')
+          @day_1_kpts<< kpt
+        elsif kpt.date.strftime('%Y/%-m/%d')== (Time.now.-2.day).strftime('%Y/%-m/%d')
+          @day_2_kpts<< kpt       
+        elsif kpt.date.strftime('%Y/%-m/%d')== (Time.now.-3.day).strftime('%Y/%-m/%d')
+          @day_3_kpts<< kpt
+        elsif kpt.date.strftime('%Y/%-m/%d')== (Time.now.-4.day).strftime('%Y/%-m/%d')
+          @day_4_kpts<< kpt
+        elsif kpt.date.strftime('%Y/%-m/%d')== (Time.now.-5.day).strftime('%Y/%-m/%d')
+          @day_5_kpts<< kpt
+        elsif kpt.date.strftime('%Y/%-m/%d')== (Time.now.-6.day).strftime('%Y/%-m/%d')
+          @day_6_kpts<< kpt
+        elsif kpt.date.strftime('%Y/%-m/%d')== (Time.now.-7.day).strftime('%Y/%-m/%d')
+          @day_7_kpts<< kpt
+        end
       end
     end
+    @weekday_kpts<< @day0_kpts
+    @weekday_kpts<< @day_1_kpts
+    @weekday_kpts<< @day_2_kpts
+    @weekday_kpts<< @day_3_kpts
+    @weekday_kpts<< @day_4_kpts
+    @weekday_kpts<< @day_5_kpts
+    @weekday_kpts<< @day_6_kpts
+    @weekday_kpts<< @day_7_kpts
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
   def set_team

@@ -1,6 +1,9 @@
 ja:
   admin:
     js:
+      user: ユーザー
+      team: チーム
+      join_team: 参加する
       true: True
       false: False
       is_present: 存在する
