@@ -1,7 +1,7 @@
 class JoinTeamsController < ApplicationController
   before_action :authenticate_user!, only: [:destroy, :create]
   def create
-    if current_user.name == 'ゲストユーザー'|| current_user.name == 'ゲスト管理者'
+    if current_user.name == 'ゲストユーザー'
       redirect_to teams_path, notice: 'ゲストユーザーはチームに参加できません'
     else
       join_team = current_user.join_teams.create(team_id: params[:team_id])

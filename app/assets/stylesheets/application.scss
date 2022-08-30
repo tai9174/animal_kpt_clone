@@ -19,24 +19,24 @@ body{
   text-align:center;
   color:	#333333	;
   height: 100%;
-  
   a:link {color: #666; text-decoration:none }
   a:hover { color:#FFCC99; text-decoration:none; 
             background-color:transparent;}
   a{
   font-size:20px;
             }
-  }  
+  }
+
 table {
     margin-right: auto;
   }
+
 header {
   display: flex;
   align-items: center;
   color:white;
   font-size:25px;
   background: linear-gradient(#FFCC99,#FFCCCC,);
-
   height:80px;
   z-index: 9999;
   top: 0px;
@@ -54,7 +54,8 @@ footer { margin-top: auto;
   left: 0; bottom: 0; width: 100%; 
   background: linear-gradient(#FFCCCC,#FFCC99,);
   text-align: center; 
-  color: #fff ; }
+  color: #fff ; 
+}
 
 .nav {
     margin-left: auto;

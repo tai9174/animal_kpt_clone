@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      kpt: KPT
+      join_team: チーム参加
+      team: チーム

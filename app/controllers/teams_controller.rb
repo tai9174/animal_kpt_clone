@@ -227,7 +227,7 @@ class TeamsController < ApplicationController
   end
 
   def ensure_normal_user
-    if current_user.name == 'ゲストユーザー' || current_user.name == 'ゲスト管理者'
+    if current_user.name == 'ゲストユーザー' 
       redirect_to teams_path, notice: 'ゲストユーザーはチームを編集することができません'
     end
   end
