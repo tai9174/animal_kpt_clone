@@ -3,7 +3,7 @@ class FavoritsController < ApplicationController
 
 
   def index
-    @kpts = current_user.kpts
+    @kpts = current_user.kpts.order(start_time: :desc)
     @favorite_kpts =[]
     @kpts.each do |kpt|
       if kpt.favorite == true
